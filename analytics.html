@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Studio — Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weatherApp.css" />
+</head>
+<body data-page="analytics" class="theme-clear">
+  <div class="app-shell app-shell--wide">
+    <header class="top-nav">
+      <div class="brand">WEATHER STUDIO</div>
+      <nav class="top-nav__links">
+        <a href="weatherApp.html">Weather</a>
+        <a href="forecast.html">Forecast</a>
+        <a href="analytics.html" class="is-active">Analytics</a>
+        <a href="map.html">Map</a>
+      </nav>
+      <div class="top-nav__actions">
+        <button type="button" class="ghost-action js-nav-search">Search</button>
+        <button type="button" class="ghost-action js-nav-location">Location</button>
+        <button type="button" class="ghost-action js-nav-unit" aria-pressed="false">Units · °C</button>
+        <button type="button" class="ghost-action js-theme-toggle" aria-pressed="false">Light mode</button>
+        <button type="button" class="menu-toggle js-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav js-mobile-nav" hidden>
+      <a href="weatherApp.html">Weather</a>
+      <a href="forecast.html">Forecast</a>
+      <a href="analytics.html" class="is-active">Analytics</a>
+      <a href="map.html">Map</a>
+    </nav>
+
+    <main class="analytics-page">
+      <section class="page-header panel">
+        <div>
+          <div class="panel-kicker">Atmospheric Analytics</div>
+          <h1>Current weather system analysis and forecast trends.</h1>
+        </div>
+      </section>
+
+      <section class="analytics-grid analytics-grid--large">
+        <article class="panel chart-panel chart-panel--large js-temp-chart">
+          <div class="chart-header">
+            <span class="chart-title">Temperature Trends</span>
+            <span class="chip">Current</span>
+          </div>
+          <div class="chart-box js-chart-temperature"></div>
+        </article>
+
+        <article class="panel chart-panel js-rain-chart">
+          <div class="chart-header">
+            <span class="chart-title">Precipitation</span>
+            <span class="chip js-chip-precip">--</span>
+          </div>
+          <div class="chart-box js-chart-precipitation"></div>
+        </article>
+
+        <article class="panel chart-panel js-wind-chart">
+          <div class="chart-header">
+            <span class="chart-title">Wind Vector</span>
+            <span class="chip js-chip-wind">--</span>
+          </div>
+          <div class="chart-box js-chart-wind"></div>
+        </article>
+
+        <article class="panel chart-panel chart-panel--large js-pressure-chart">
+          <div class="chart-header">
+            <span class="chart-title">Humidity / Pressure</span>
+            <span class="chip js-chip-pressure">--</span>
+          </div>
+          <div class="chart-box js-chart-pressure"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="weatherApp.js"></script>
+</body>
+</html>

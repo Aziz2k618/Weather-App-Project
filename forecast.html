@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Studio — Forecast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weatherApp.css" />
+</head>
+<body data-page="forecast" class="theme-clear">
+  <div class="app-shell app-shell--wide">
+    <header class="top-nav">
+      <div class="brand">WEATHER STUDIO</div>
+      <nav class="top-nav__links">
+        <a href="weatherApp.html">Weather</a>
+        <a href="forecast.html" class="is-active">Forecast</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="map.html">Map</a>
+      </nav>
+      <div class="top-nav__actions">
+        <button type="button" class="ghost-action js-nav-search">Search</button>
+        <button type="button" class="ghost-action js-nav-location">Location</button>
+        <button type="button" class="ghost-action js-nav-unit" aria-pressed="false">Units · °C</button>
+        <button type="button" class="ghost-action js-theme-toggle" aria-pressed="false">Light mode</button>
+        <button type="button" class="menu-toggle js-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav js-mobile-nav" hidden>
+      <a href="weatherApp.html">Weather</a>
+      <a href="forecast.html" class="is-active">Forecast</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="map.html">Map</a>
+    </nav>
+
+    <main class="forecast-page">
+      <section class="summary-hero panel js-forecast-summary">
+        <div class="forecast-atmosphere js-forecast-atmosphere" aria-hidden="true"></div>
+      </section>
+      <section class="forecast-main-grid">
+        <article class="panel js-hourly-panel"></article>
+        <aside class="panel js-regional-panel"></aside>
+      </section>
+      <section class="panel js-daily-panel"></section>
+      <section class="forecast-bottom-grid">
+        <article class="panel js-solar-panel"></article>
+        <article class="panel js-air-panel"></article>
+      </section>
+    </main>
+  </div>
+
+  <script src="weatherApp.js"></script>
+</body>
+</html>
